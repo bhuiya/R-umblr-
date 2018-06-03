@@ -1,0 +1,23 @@
+
+Migration running
+
+      1.   rake db:create_migration NAME=create_userpost_table
+
+      2.    create_table :todos do |t|
+               t.string :name
+               t.string :description
+             end
+
+      3.   rake db:migrate
+           To delete the migration:
+
+      4.   rake db:rollback
+
+
+      SecureRandom.hex
+      => "71d201dc10727ecd941bfb65c53c32c4"
+      irb(main):008:0> SecureRandom.hex
+      => "88b9fafd46c036ca472a5375c4d879e5"
+
+
+      Open the environment variable and set : SEI_SESSION_SECRECT

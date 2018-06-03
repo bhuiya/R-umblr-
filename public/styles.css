@@ -1,0 +1,24 @@
+.high_priority {
+  background: #fe8b8b;
+  color: white;
+}
+
+.medium_priority {
+  background: #f3d26f;
+  color: white;
+}
+
+.low_priority {
+  background: #6ec682;
+  color: white;
+}
+
+.alert_content {
+  color: red;
+  align-content: center;
+  font: 13px;
+}
+
+.user_post {
+  margin-left: 20%;
+}

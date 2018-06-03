@@ -1,0 +1,206 @@
+
+<header id="main-header" class="py-2 bg-primary text-white">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h1><i class="fa fa-gear"></i> Dashboard</h1>
+      </div>
+    </div>
+  </div>
+</header>
+
+ <!-- ACTIONS -->
+ <section id="action" class="py-4 mb-4 bg-light">
+   <div class="container">
+     <div class="row">
+       <div class="col-md-3">
+         <a href="#" class="btn btn-primary btn-block" data-toggle="modal" data-target="#addPostModal">
+           <i class="fa fa-plus"></i> Add Post
+         </a>
+       </div>
+       <div class="col-md-3">
+         <a href="#" class="btn btn-success btn-block" data-toggle="modal" data-target="#addCategoryModal">
+           <i class="fa fa-plus"></i> Add Category
+         </a>
+       </div>
+
+     </div>
+   </div>
+ </section>
+
+ <!-- POSTS -->
+ <section id="posts">
+   <div class="container">
+     <div class="row">
+
+       <div class="col-md-6">
+         <div class="card text-center bg-primary text-white mb-6">
+           <div class="card-body">
+             <h3>All Posts</h3>
+             <h1 class="display-4">
+               <i class="fa fa-pencil"></i> <%= @all_post %>
+             </h1>
+             <a href="/user/all/post" class="btn btn-outline-light btn-sm">View</a>
+           </div>
+         </div>
+
+
+         <div class="card text-center bg-primary text-white mb-6">
+           <div class="card-body">
+             <h3>Personal Posts</h3>
+             <h1 class="display-4">
+               <i class="fa fa-pencil"></i> <%= @current_post %>
+             </h1>
+             <a href="/user/post" class="btn btn-outline-light btn-sm">View</a>
+           </div>
+         </div>
+
+         <div class="card text-center bg-success text-white mb-6">
+           <div class="card-body">
+             <h3>Categories</h3>
+             <h1 class="display-4">
+               <i class="fa fa-folder-open-o"></i> 4
+             </h1>
+             <a href="/catagories" class="btn btn-outline-light btn-sm">View</a>
+           </div>
+         </div>
+
+
+       </div>
+
+
+     </div>
+
+   </div>
+ </section>
+
+
+
+ <!-- POST MODAL -->
+ <form action="/drashboard_view" method="POST">
+ <div class="modal fade" id="addPostModal">
+   <div class="modal-dialog modal-lg">
+     <div class="modal-content">
+
+
+       <div class="modal-header bg-primary text-white">
+         <h5 class="modal-title">Add Post</h5>
+         <button class="close" data-dismiss="modal"><span>&times;</span></button>
+       </div>
+
+       <div class="modal-body">
+
+           <div class="form-group">
+             <label for="title">Title</label>
+             <input name="subject" type="text" class="form-control">
+           </div>
+           <div class="form-group">
+             <label for="category">Category</label>
+             <select name="catagory" class="form-control">
+               <option value="Web Development">Web Development</option>
+               <option value="Tech Gadgets">Tech Gadgets</option>
+               <option value="Business">Business</option>
+               <option value="Health & Wellness">Health & Wellness</option>
+             </select>
+           </div>
+           <div class="form-group">
+             <label for="body">Body</label>
+
+              <textarea class="form-control" name="editor1"> </textarea>
+            </div>
+
+
+
+       </div>
+       <div class="modal-footer">
+         <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+           <button id="create_post" class="btn btn-warning">Save Changes</button>
+       </div>
+
+     </div>
+   </div>
+ </div>
+
+</form>
+
+
+
+
+ <!-- CATEGORY MODAL -->
+ <div class="modal fade" id="addCategoryModal">
+   <div class="modal-dialog modal-lg">
+     <div class="modal-content">
+       <div class="modal-header bg-success text-white">
+         <h5 class="modal-title">Add Category</h5>
+         <button class="close" data-dismiss="modal"><span>&times;</span></button>
+       </div>
+       <div class="modal-body">
+         <form>
+           <div class="form-group">
+             <label for="title">Title</label>
+             <input name="title" type="text" class="form-control">
+           </div>
+         </form>
+       </div>
+       <div class="modal-footer">
+         <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+         <button class="btn btn-success" data-dismiss="modal">Save Changes</button>
+       </div>
+     </div>
+   </div>
+ </div>
+
+ <!-- USER MODAL -->
+ <div class="modal fade" id="addUserModal">
+   <div class="modal-dialog modal-lg">
+     <div class="modal-content">
+       <div class="modal-header bg-warning text-white">
+         <h5 class="modal-title">Add User</h5>
+         <button class="close" data-dismiss="modal"><span>&times;</span></button>
+       </div>
+       <div class="modal-body">
+         <form>
+           <div class="form-group">
+             <label for="name">Name</label>
+             <input type="text" class="form-control">
+           </div>
+           <div class="form-group">
+             <label for="email">Email</label>
+             <input type="email" class="form-control">
+           </div>
+           <div class="form-group">
+             <label for="name">Password</label>
+             <input type="password" class="form-control">
+           </div>
+           <div class="form-group">
+             <label for="name">Confirm Password</label>
+             <input type="password" class="form-control">
+           </div>
+         </form>
+       </div>
+       <div class="modal-footer">
+         <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+         <button class="btn btn-warning" data-dismiss="modal">Save Changes</button>
+       </div>
+     </div>
+   </div>
+ </div>
+
+ <script src="/js/jquery.min.js"></script>
+ <script src="/js/popper.min.js"></script>
+ <script src="/js/bootstrap.min.js"></script>
+ <script src="https://cdn.ckeditor.com/4.7.1/standard/ckeditor.js"></script>
+ <script>
+     CKEDITOR.replace( 'editor1' );
+     var btn= document.getElementById('create_post');
+     var editor_data = CKEDITOR.instances.editor1.getData();
+
+
+
+     btn.addEventListener("click", function(){
+         var editor_data = CKEDITOR.instances.editor1.getData();
+         document.getElementById("editor1").value = editor_data;
+         alert(editor_data);
+      });
+
+     </script>

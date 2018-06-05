@@ -1,0 +1,23 @@
+Create Rake File at Notepad : "Rake"
+
+
+require 'sinatra/activerecord/rake'
+require './app'
+
+
+heroku login:
+
+heroku create badrublog
+
+git init
+
+git add . 
+
+git commit -m "heroku commit"
+
+git push heroku master
+
+heroku run rake db:migrate
+
+heroku open
+

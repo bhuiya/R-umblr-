@@ -33,7 +33,8 @@ Blogging app concept in the fourth individual project during Web-Development Fel
       
   
 # Features:
-* Users can browse posts without logging in.
+* Users can browse posts and edit their own post.
+* Each user is able to view all of the post but edit their own post.
 * Users can sign up for an account.
 * Users can add, read, edit, or delete their personal posts on their blog.
 * Users can search posts by tag.

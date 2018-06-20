@@ -1,37 +1,24 @@
-# R-umblr-
-A fullstack simple blog website that enables someone to sign up for an account and create relevant posts on a topic of their choosing.
-Things wan to cover:
- * Ruby
- * Sinatra
- * Postgres
- * JavaScript
- * HTML5
- * CSS3
+# Ruby Tumblr
 
-# R-umblr
+## Goal:
 
-Blogging app concept in the fourth individual project during Web-Development Fellowship at New York Code and Design Academy.
+To create a fullstack simple blog website that enables someone to sign up for an account and create relevant posts on a topic of their choosing.
 
-# Design and Layout: By Janelle Ballack. 
-* Created logo and applied UX design concepts towards user flow using Sketch, Photoshop and Illustrator.
+### Heroku Deployment
+<https://badrublog.herokuapp.com/>
 
-# Built with:
- * Ruby
- * Sinatra
- * Postgres
- * JavaScript
- * HTML5
- * CSS3* Ruby
- * Sinatra
- * PostgreSQL
- * Bootstrap
+### Sample Login:
+Username: *demo@demo.com*
+Password: *demo123*
 
-# Deployment
-  * https://badrublog.herokuapp.com/
-  * Demo login: 
-      email: demo@demo.com   password: 123456
-      
-  
+## Built With:
+* Ruby
+* Sinatra
+* ActiveRecord
+* PostgreSQL
+* Deploying to Heroku
+* Bootstrap
+
 # Features:
 * Users can browse posts and edit their own post.
 * Each user is able to view all of the post but edit their own post.
@@ -39,67 +26,6 @@ Blogging app concept in the fourth individual project during Web-Development Fel
 * Users can add, read, edit, or delete their personal posts on their blog.
 * Users can search posts by tag.
 
-# Acknowledgements
-* Inspiration: From different Wordpress websites I built.
-* Photography: Pexels (https://www.pexels.com/).
-
-# Post MVP
-* Create additional search options such as search by author, date, and post title.
-* Add paginate. 
-
-
-# R-umblr (Ruby Tumblr)
-
-## Goal:
-
-To create a fullstack simple blog website that enables someone to sign up for an account and create relevant posts on a topic of their choosing.
-
-### Heroku Deployment
-<https://gh-rumblr.herokuapp.com/>
-
-### Sample Login:
-Username: *blogger123*
-
-Password: *password*
-
-## Built With:
-* Ruby
-* Sinatra
-* ActiveRecord
-* PostgreSQL
-* Cookies
-* Deploying to Heroku
-* Bootstrap
-
-## Features:
-
-* Public v. private nav menu
-
-![public nav](/public/img/nav-public.png "Public Nav - not logged in")
-![private nav](/public/img/nav-logged-in.png "Private Nav - logged in")
-
-* Facebook login
-* Password mismatch warning
-* Deactivate submit buttons on password mismatch
-* Animate password input on button click while passwords mismatched
-
-![login screenshot](/public/img/pw-miss-anim.png "Password Mismatch")
-
-* Login welcome
-
-![welcome back user](/public/img/login.png "Login Welcome Back")
-
-* See all user posts and most recent update times, if any
-
-![all posts](/public/img/posts-all.png "All Posts")
-
-* My Posts view includes edit and delete options
-
-![my posts](/public/img/posts-self.png "My Posts")
-
-* My Account view includes account info, edit, and delete options well as log in/out of Facebook
-
-![my account](/public/img/profile-self.png "My Account")
 
 
 ### Learning Objectives:  

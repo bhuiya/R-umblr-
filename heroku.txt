@@ -1,5 +1,5 @@
 Create Rake File at Notepad : "Rake"
-
+http://curriculum.railsbridge.org/intro-to-rails/deploying_to_heroku
 
 require 'sinatra/activerecord/rake'
 require './app'

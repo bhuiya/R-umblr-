@@ -1,45 +1,40 @@
-
 <form action="/user/post/update/<%=@post_userid%>/<%=@post_id%>" method="POST">
-<div  id="addPostModal">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-
-        <div class="modal-header bg-primary text-white">
-          <h5 class="modal-title">Title  Add Post</h5>
-          <button class="close" data-dismiss="modal"><span>&times;</span></button>
-        </div>
-
-        <div class="modal-body">
-
-            <div class="form-group">
-              <label for="title">  </label>
-              <input name="subject" value=<%= @post_title %> type="text" class="form-control">
-            </div>
-            <div class="form-group">
-              <label for="category">      </label>
-              <select name="catagory" class="form-control">
-                <option value="Web Development">Web Development</option>
-                <option value="Tech Gadgets">Tech Gadgets</option>
-                <option value="Business">Business</option>
-                <option value="Health & Wellness">Health & Wellness</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="body">Description</label>
-
-               <textarea class="form-control" name="editor1"><%= @post_description  %></textarea>
-           </div>
-       </div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button id="create_post" class="btn btn-warning">Save Changes</button>
-        </div>
-      </div>
+ <div  id="addPostModal">
+  <div class="modal-dialog modal-lg">
+   <div class="modal-content">
+    <div class="modal-header bg-primary text-white">
+      <h5 class="modal-title">Title  Add Post</h5>
+      <button class="close" data-dismiss="modal"><span>&times;</span></button>
     </div>
+    <div class="modal-body">
+     <div class="form-group">
+      <label for="title">  </label>
+        <input name="subject" value=<%= @post_title %> type="text" class="form-control">
+     </div>
+     <div class="form-group">
+      <label for="category">      </label>
+      <select name="catagory" class="form-control">
+       <option value="Web Development">Web Development</option>
+       <option value="Tech Gadgets">Tech Gadgets</option>
+       <option value="Business">Business</option>
+       <option value="Health & Wellness">Health & Wellness</option>
+      </select>
+     </div>
+     <div class="form-group">
+      <label for="body">Description</label>
+       <textarea class="form-control" name="editor1"><%= @post_description  %></textarea>
+     </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <button id="create_post" class="btn btn-warning">Save Changes</button>
+    </div>
+   </div>
+  </div>
 </div>
 </form>
 
-  <script>
+<script>
       CKEDITOR.replace( 'editor1' );
       var btn= document.getElementById('create_post');
       var editor_data = CKEDITOR.instances.editor1.getData();
@@ -50,4 +45,4 @@
           alert(editor_data);
      });
 
-  </script>
+</script>
